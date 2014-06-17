@@ -27,4 +27,5 @@ Usage
 
 Available functions:
 
-    int delay(long milliseconds); //Returns the return of nanosleep(). See that documentation for return values.
+    int delay(long milliseconds); //Returns the return of nanosleep().
+                                  //See that documentation for return values.
