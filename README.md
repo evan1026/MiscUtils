@@ -1,7 +1,7 @@
 MiscUtils
 =========
 
-A bunch of miscilanious utilities mostly for my own use but also free for others to use.
+A bunch of miscellaneous utilities mostly for my own use but also free for others to use.
 
 Installation is easy:
 
