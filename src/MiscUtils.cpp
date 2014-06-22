@@ -6,3 +6,10 @@ int delay(long milliseconds){
     tim.tv_nsec = (milliseconds % 1000) * 1000000;
     return nanosleep(&tim,&tim2);
 }
+
+int stringToInt(std::string input){
+    std::stringstream data(input);
+    int output;
+    data >> output;
+    return output;
+}
