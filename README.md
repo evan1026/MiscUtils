@@ -30,3 +30,5 @@ Available functions:
     int delay(long milliseconds); //Returns the return of nanosleep().
                                   //See that documentation for return values.
     int stringToInt(std::string input); //Converts a string to an int
+    std::string executeGetOutput(std::string cmd); //Executes a command in the native shell and returns the output
+    void execute(std::string cmd); //Executes the command, this time ignoring output
