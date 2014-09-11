@@ -1,4 +1,10 @@
 #include <iostream>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <pwd.h>
 #include "MiscUtils.hpp"
 
 int MiscUtils::delay(long milliseconds){
@@ -51,4 +57,17 @@ std::string MiscUtils::replaceAllGiveString(std::string str, const std::string& 
         start_pos += to.length();
     }
     return str;
+}
+
+std::string MiscUtils::getLinuxHomeFolder() {
+    struct passwd *pw = getpwuid(getuid());
+    std::string homedir = pw->pw_dir;
+    return homedir + "/";
+}
+
+bool MiscUtils::dirExists(std::string path){
+    struct stat info;
+    if (stat( path.c_str(), &info ) != 0) return 0;
+    else if(info.st_mode & S_IFDIR)       return 1;
+    else                                  return 0;
 }

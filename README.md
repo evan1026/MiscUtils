@@ -42,3 +42,5 @@ Available functions:
     void        MiscUtils::replaceAll(std::string& str, const std::string& from, const std::string& to);          //Replaces all instances of 'from' with 'to' in 'str', modifying the original string
     std::string MiscUtils::replaceAllGiveString(std::string str, const std::string& from, const std::string& to); //Same as before, but leaves the original string intact and returns the new one
                                                                                                                   //This is useful when you want to plug some command's return right into it without storing it in between
+    std::string getLinuxHomeFolder();        //Gets the string representation of the users home folder. Only works on linux
+    bool        dirExists(std::string path); //Self-explainatory

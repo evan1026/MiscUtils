@@ -16,6 +16,8 @@ namespace MiscUtils {
     void execute(std::string cmd);
     void replaceAll(std::string& str, const std::string& from, const std::string& to);
     std::string replaceAllGiveString(std::string str, const std::string& from, const std::string& to);
+    std::string getLinuxHomeFolder();
+    bool dirExists(std::string path);
 }
 
 #endif
